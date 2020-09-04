@@ -1,4 +1,4 @@
-package reserving
+package triangle
 
 //Triangle : Defines the loss triangle structure used for paid and incurred development
 type Triangle struct {
@@ -18,14 +18,4 @@ type Triangle struct {
 	IsUltimate          bool     `json:"triangle_is_ultimate"`
 	IsFull              bool     `json:"triangle_is_full"`
 	IsVal               bool     `json:"triangle_is_val"`
-}
-
-//CumIncrToggle : Toggles the triangle's "IsCumulative" attribute
-func (t *Triangle) CumIncrToggle() {
-	t.IsCumulative = !t.IsCumulative
-}
-
-//DevToVal : Toggles whether a triangle is using development lag or valuation
-func (t *Triangle) DevToVal() {
-	t.IsVal = !t.IsVal
 }
